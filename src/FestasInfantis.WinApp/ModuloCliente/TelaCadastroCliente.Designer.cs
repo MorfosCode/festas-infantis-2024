@@ -30,7 +30,6 @@
         {
             labelId = new Label();
             txtId = new TextBox();
-            listBox1 = new ListBox();
             labelNome = new Label();
             labelTelefone = new Label();
             labelCpf = new Label();
@@ -59,15 +58,6 @@
             txtId.Size = new Size(100, 31);
             txtId.TabIndex = 100;
             txtId.TextAlign = HorizontalAlignment.Right;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(12, 162);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(487, 154);
-            listBox1.TabIndex = 100;
             // 
             // labelNome
             // 
@@ -108,7 +98,7 @@
             // 
             btnSalvar.AutoSize = true;
             btnSalvar.DialogResult = DialogResult.OK;
-            btnSalvar.Location = new Point(205, 331);
+            btnSalvar.Location = new Point(205, 162);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(94, 35);
             btnSalvar.TabIndex = 3;
@@ -119,7 +109,7 @@
             // btnLimpar
             // 
             btnLimpar.AutoSize = true;
-            btnLimpar.Location = new Point(305, 331);
+            btnLimpar.Location = new Point(305, 162);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(94, 35);
             btnLimpar.TabIndex = 4;
@@ -131,7 +121,7 @@
             // 
             btnCancelar.AutoSize = true;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(405, 331);
+            btnCancelar.Location = new Point(405, 162);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 35);
             btnCancelar.TabIndex = 5;
@@ -158,13 +148,12 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(515, 385);
+            ClientSize = new Size(515, 216);
             Controls.Add(maskedTxtCpf);
             Controls.Add(maskedTxtTelefone);
             Controls.Add(btnCancelar);
             Controls.Add(btnLimpar);
             Controls.Add(btnSalvar);
-            Controls.Add(listBox1);
             Controls.Add(txtNome);
             Controls.Add(txtId);
             Controls.Add(labelCpf);
@@ -187,7 +176,6 @@
 
         private Label labelId;
         private TextBox txtId;
-        private ListBox listBox1;
         private Label labelNome;
         private Label labelTelefone;
         private Label labelCpf;
