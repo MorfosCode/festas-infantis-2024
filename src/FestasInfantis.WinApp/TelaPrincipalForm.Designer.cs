@@ -33,6 +33,7 @@
             clientesMenuItem = new ToolStripMenuItem();
             compromissosMenuItem = new ToolStripMenuItem();
             tarefasToolStripMenuItem = new ToolStripMenuItem();
+            aluguelToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             statusLabelPrincipal = new ToolStripStatusLabel();
             toolStrip1 = new ToolStrip();
@@ -68,7 +69,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, compromissosMenuItem, tarefasToolStripMenuItem });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, compromissosMenuItem, tarefasToolStripMenuItem, aluguelToolStripMenuItem });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(86, 24);
             cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -93,6 +94,13 @@
             tarefasToolStripMenuItem.Size = new Size(180, 24);
             tarefasToolStripMenuItem.Text = "Item";
             tarefasToolStripMenuItem.Click += itemToolStripMenuItem_Click;
+            // 
+            // aluguelToolStripMenuItem
+            // 
+            aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
+            aluguelToolStripMenuItem.Size = new Size(224, 30);
+            aluguelToolStripMenuItem.Text = "Alugueis";
+            aluguelToolStripMenuItem.Click += festasToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -215,6 +223,7 @@
             btnConcluirAluguel.Name = "btnConcluirAluguel";
             btnConcluirAluguel.Padding = new Padding(5);
             btnConcluirAluguel.Size = new Size(38, 38);
+            btnConcluirAluguel.Click += btnConcluirAluguel_Click;
             // 
             // btnConfigurarDescontos
             // 
@@ -296,5 +305,6 @@
         private ToolStripButton btnConcluirAluguel;
         private ToolStripButton btnConfigurarDescontos;
         private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem aluguelToolStripMenuItem;
     }
 }
