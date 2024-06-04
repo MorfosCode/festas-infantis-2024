@@ -1,4 +1,5 @@
 using eAgenda.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloAluguel;
 using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp
@@ -8,6 +9,7 @@ namespace FestasInfantis.WinApp
         ControladorBase controlador;
 
         RepositorioCliente repositorioClientes;
+        RepositorioAluguel repositorioAluguel;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -19,6 +21,7 @@ namespace FestasInfantis.WinApp
             Instancia = this;
 
             repositorioClientes = new RepositorioCliente();
+            repositorioAluguel = new RepositorioAluguel();
 
             //Cadastra registro de cliente para teste
             CadastrarClientesTeste();
@@ -77,25 +80,6 @@ namespace FestasInfantis.WinApp
             ConfigurarTelaPrincipal(controlador);
         }
 
-
-        #region Eventos de botões
-
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            controlador.Adicionar();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            controlador.Editar();
-        }
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            controlador.Excluir();
-        }
-
-        #endregion
-
         #region Cadastra clientes para facilitar nos testes
         private void CadastrarClientesTeste()
         {
@@ -116,5 +100,38 @@ namespace FestasInfantis.WinApp
             repositorioClientes.CadastrarVarios(cliente);
         }
         #endregion
+
+        #region Eventos de botões
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            controlador.Adicionar();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            controlador.Editar();
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            controlador.Excluir();
+        }
+
+        #endregion
+
+
+        private void festasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorAluguel(repositorioAluguel);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void btnConcluirAluguel_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

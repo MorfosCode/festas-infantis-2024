@@ -12,7 +12,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         private RepositorioCliente repositorioCliente;
         private TabelaClienteControl tabelaCliente;
 
-        #region Contrutor
+        #region Construtor
         public ControladorCliente(RepositorioCliente repositorio)
         {
             repositorioCliente = repositorio;
@@ -41,7 +41,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             Cliente novoCliente = telaCadastroCliente.Cliente;
             repositorioCliente.Cadastrar(novoCliente);
 
-            CarregarContatos();
+            CarregarClientes();
 
             TelaPrincipalForm
                 .Instancia
@@ -75,7 +75,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             repositorioCliente.Editar(clienteSelecionado.Id, clienteEditado);
 
-            CarregarContatos();
+            CarregarClientes();
 
             TelaPrincipalForm
                 .Instancia
@@ -108,7 +108,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             repositorioCliente.Excluir(clienteSelecionado.Id);
 
-            CarregarContatos();
+            CarregarClientes();
 
             TelaPrincipalForm
                 .Instancia
@@ -122,7 +122,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             if (tabelaCliente == null)
                 tabelaCliente = new TabelaClienteControl();
 
-            CarregarContatos();
+            CarregarClientes();
 
             return tabelaCliente;
         }
@@ -138,7 +138,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         #endregion
 
         #region Carrega registros na lista de clientes
-        private void CarregarContatos()
+        private void CarregarClientes()
         {
             List<Cliente> clientes = repositorioCliente.SelecionarTodos();
             tabelaCliente.AtualizarRegistros(clientes);
