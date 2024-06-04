@@ -1,5 +1,8 @@
 using eAgenda.WinApp.Compartilhado;
+
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloItem;
+using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp
 {
@@ -8,6 +11,9 @@ namespace FestasInfantis.WinApp
         ControladorBase controlador;
 
         RepositorioCliente repositorioClientes;
+        RepositorioTema repositorioTema;
+        RepositorioItem repositorioItem;
+
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -116,5 +122,23 @@ namespace FestasInfantis.WinApp
             repositorioClientes.CadastrarVarios(cliente);
         }
         #endregion
+
+        private void temaMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorTema(repositorioTema);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void itemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorItem(repositorioItem);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
+        }
     }
 }

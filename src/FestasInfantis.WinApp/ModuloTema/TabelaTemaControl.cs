@@ -9,30 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using eAgenda.WinApp.Compartilhado;
 
-namespace FestasInfantis.WinApp.ModuloCliente
+
+namespace FestasInfantis.WinApp.ModuloTema
 {
-    public partial class TabelaClienteControl : UserControl
+    public partial class TabelaTemaControl : UserControl
     {
-        public TabelaClienteControl()
+        public TabelaTemaControl()
         {
             InitializeComponent();
-
             grid.Columns.AddRange(obterColunas());
             grid.ConfigurarGridSomenteLeitura();
             grid.ConfigurarGridZebrado();
-            
-        }
 
-        public void AtualizarRegistros(List<Cliente> clientes)
+
+        }
+        public void AtualizarRegistros(List<Tema> temas)
         {
             grid.Rows.Clear();
-            foreach (Cliente contato in clientes)
+            foreach (Tema tema in temas)
                 grid.Rows.Add
                 (
-                    contato.Id,
-                    contato.Nome,
-                    contato.Telefone,
-                    contato.Cpf
+                    tema.Id,
+                    tema.Nome,
+                    tema.Valor
+                    
                 );
         }
 
@@ -40,15 +40,14 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
             return grid.SelecionarId();
         }
-
         private static DataGridViewColumn[] obterColunas()
         {
             return new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn{ DataPropertyName = "id", HeaderText = "ID" },
-                new DataGridViewTextBoxColumn{ DataPropertyName = "Cliente", HeaderText = "Cliente" },
-                new DataGridViewTextBoxColumn{ DataPropertyName = "Telefone", HeaderText = "Telefone" },
-                new DataGridViewTextBoxColumn{ DataPropertyName = "Cpf", HeaderText = "CPF" }
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Id", HeaderText = "ID" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Tema", HeaderText = "Tema" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Valor", HeaderText = "Valor" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Aluguel", HeaderText = "Aluguel" }
             };
         }
     }

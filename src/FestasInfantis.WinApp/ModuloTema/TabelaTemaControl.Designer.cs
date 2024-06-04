@@ -1,6 +1,6 @@
-﻿namespace FestasInfantis.WinApp.ModuloCliente
+﻿namespace FestasInfantis.WinApp.ModuloTema
 {
-    partial class TabelaClienteControl
+    partial class TabelaTemaControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,22 +35,18 @@
             // grid
             // 
             grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grid.Dock = DockStyle.Fill;
             grid.Location = new Point(0, 0);
-            grid.Margin = new Padding(3, 2, 3, 2);
             grid.Name = "grid";
-            grid.RowHeadersWidth = 51;
-            grid.Size = new Size(646, 254);
+            grid.Size = new Size(432, 353);
             grid.TabIndex = 0;
             // 
-            // TabelaClienteControl
+            // TabelaTemaControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(grid);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "TabelaClienteControl";
-            Size = new Size(646, 254);
+            Name = "TabelaTemaControl";
+            Size = new Size(431, 348);
             ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
         }
