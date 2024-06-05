@@ -43,6 +43,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(433, 418);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
@@ -61,6 +62,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.DialogResult = DialogResult.OK;
             btnSalvar.Location = new Point(316, 418);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
@@ -116,6 +118,7 @@
             ListBoxItem.Name = "ListBoxItem";
             ListBoxItem.Size = new Size(304, 220);
             ListBoxItem.TabIndex = 8;
+            ListBoxItem.SelectedIndexChanged += ListBoxItem_SelectedIndexChanged;
             // 
             // txtValor
             // 

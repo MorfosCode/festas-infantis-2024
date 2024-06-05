@@ -1,5 +1,6 @@
 ﻿
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloItem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,24 +28,26 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
             get
             {
-            return tema;
+                return tema;
             }
         }
 
         public TelaTemaForm()
         {
             InitializeComponent();
+            
         }
-       
+        
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             string nome = txtTema.Text;
-            string valor = txtValor.Text;
-           
+            string valor = txtTema.Text;
+            List<Item> itens =ListBoxItem.CheckedItems.Cast<Item>().ToList();       
+
 
             tema = new Tema(nome, valor);
-
+          
             List<string> erros = tema.Validar();
 
             if (erros.Count > 0)
@@ -55,6 +58,11 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
         }
         private void TelaItemForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

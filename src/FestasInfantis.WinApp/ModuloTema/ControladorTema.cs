@@ -1,4 +1,5 @@
 ﻿using eAgenda.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,11 +108,15 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (tabelaTema == null)
                 tabelaTema = new TabelaTemaControl();
 
-          
+            CarregarTemas();
 
             return tabelaTema;
         }
-
+        private void CarregarTemas()
+        {
+            List<Tema> tema = repositorioTema.SelecionarTodos();
+            tabelaTema.AtualizarRegistros(tema);
+        }
         public int ContarRegistros()
         {
             List<Tema> tema = repositorioTema.SelecionarTodos();

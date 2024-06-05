@@ -1,4 +1,5 @@
 ﻿using eAgenda.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
         public ControladorItem(RepositorioItem repositorioItem)
         {
-          repositorioItem = repositorioItem;
+          this.repositorioItem = repositorioItem;
         }
 
         public override string TipoCadastro { get { return "Item"; } }
@@ -37,7 +38,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                 .Instancia
-                .AtualizarRodape($"O registro \"{novoItem.descriao}\" foi criado com sucesso!");
+                .AtualizarRodape($"O registro \"{novoItem.Descricao}\" foi criado com sucesso!");
 
         }
 
@@ -70,7 +71,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                 .Instancia
-                .AtualizarRodape($"O registro \"{itemEditado.descriao}\" foi editado com sucesso!");
+                .AtualizarRodape($"O registro \"{itemEditado.Descricao}\" foi editado com sucesso!");
         }
 
         public override void Excluir()
@@ -87,7 +88,7 @@ namespace FestasInfantis.WinApp.ModuloItem
                 return;
             }
             DialogResult resposta = MessageBox.Show(
-                $"Você deseja realmente excluir o registro \"{itemSelecionado.descriao}\"?",
+                $"Você deseja realmente excluir o registro \"{itemSelecionado.Descricao}\"?",
                 "Confirmar Exclusão",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
@@ -99,7 +100,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                .Instancia
-               .AtualizarRodape($"O registro \"{itemSelecionado.descriao}\" foi excluído com sucesso!");
+               .AtualizarRodape($"O registro \"{itemSelecionado.Descricao}\" foi excluído com sucesso!");
 
         }
 
@@ -109,7 +110,7 @@ namespace FestasInfantis.WinApp.ModuloItem
                 tabelaItem = new TabelaItemControl();
 
 
-
+            CarregarItens();
             return tabelaItem;
         }
 
@@ -118,6 +119,11 @@ namespace FestasInfantis.WinApp.ModuloItem
             List<Item> item = repositorioItem.SelecionarTodos();
 
             return item.Count();
+        }
+        private void CarregarItens()
+        {
+            List<Item> itens = repositorioItem.SelecionarTodos();
+            tabelaItem.AtualizarRegistros(itens);
         }
     }
 }

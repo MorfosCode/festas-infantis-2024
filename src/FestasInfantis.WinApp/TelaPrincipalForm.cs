@@ -28,6 +28,8 @@ namespace FestasInfantis.WinApp
 
             repositorioClientes = new RepositorioCliente();
             repositorioAluguel = new RepositorioAluguel();
+            repositorioItem = new RepositorioItem();
+            repositorioTema = new RepositorioTema();
 
             //Cadastra registro de cliente para teste
             CadastrarClientesTeste();
@@ -75,18 +77,7 @@ namespace FestasInfantis.WinApp
             pnlRegistros.Controls.Clear();
             pnlRegistros.Controls.Add(listagemContato);
         }
-
-
-        private void clientesMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorCliente(repositorioClientes);
-
-            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
-
-            ConfigurarTelaPrincipal(controlador);
-        }
-
-        #region Cadastra clientes para facilitar nos testes
+#region Cadastra clientes para facilitar nos testes
         private void CadastrarClientesTeste()
         {
             List<Cliente> cliente = new List<Cliente>()
@@ -126,6 +117,15 @@ namespace FestasInfantis.WinApp
         #endregion
 
 
+        private void clientesMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioClientes);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
         private void festasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorAluguel(repositorioAluguel);
@@ -139,7 +139,7 @@ namespace FestasInfantis.WinApp
         {
             
         }
-        #endregion
+        
 
         private void temaMenuItem_Click(object sender, EventArgs e)
         {

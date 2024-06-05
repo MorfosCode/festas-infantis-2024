@@ -12,20 +12,21 @@ namespace FestasInfantis.WinApp.ModuloItem
     public class Item: EntidadeBase
     {
         
-        public string descriao{ get; set; }
-        public string valor { get; set; }
+        public string Descricao{ get; set; }
+        public string Valor { get; set; }
+
         public Item(string descriao, string valor)
         {
-            descriao = descriao;
-            valor = valor;
+            Descricao = descriao;
+            Valor = valor;
         }
 
         public override void AtualizarRegistro(EntidadeBase novoRegistro)
         {
             Item atualizar = (Item)novoRegistro;
 
-            descriao = atualizar.descriao;
-            valor = atualizar.valor;
+            Descricao = atualizar.Descricao;
+            Valor = atualizar.Valor;
         }
 
         public override List<string> Validar()
@@ -33,9 +34,9 @@ namespace FestasInfantis.WinApp.ModuloItem
         
             List<string> erros = new List<string>();
 
+            if (string.IsNullOrEmpty(Descricao.Trim()))
+                erros.Add("O campo \"Nome\" é obrigatório");
 
-
-         
 
             return erros;
         }

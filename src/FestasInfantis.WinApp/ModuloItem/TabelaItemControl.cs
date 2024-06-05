@@ -29,8 +29,8 @@ namespace FestasInfantis.WinApp.ModuloItem
                 grid.Rows.Add
                 (
                     item.Id,
-                    item.descriao,
-                    item.valor
+                    item.Descricao,
+                    item.Valor
 
                 );
         }

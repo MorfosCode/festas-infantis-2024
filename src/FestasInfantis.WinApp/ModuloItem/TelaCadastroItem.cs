@@ -19,8 +19,8 @@ namespace FestasInfantis.WinApp.ModuloItem
             set
             {
                 txtId.Text = value.Id.ToString();
-                txtDescrição.Text = value.descriao;
-                txtValor.Text = value.valor;
+                txtDescrição.Text = value.Descricao;
+                txtValor.Text = value.Valor;
 
             }
             get
@@ -50,5 +50,9 @@ namespace FestasInfantis.WinApp.ModuloItem
             }
         }
 
+        private void TelaCadastroItem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

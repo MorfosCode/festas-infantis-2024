@@ -40,6 +40,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.DialogResult = DialogResult.OK;
             btnSalvar.Location = new Point(188, 146);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
@@ -50,6 +51,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(282, 146);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
@@ -124,6 +126,7 @@
             MinimizeBox = false;
             Name = "TelaCadastroItem";
             Text = "Cadastro Item";
+            Load += TelaCadastroItem_Load;
             ResumeLayout(false);
             PerformLayout();
         }
