@@ -11,7 +11,7 @@ using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
-    public partial class TelaAluguel : Form
+    public partial class TelaCadastroAluguelForm : Form
     {
         private Aluguel aluguel;
 
@@ -47,7 +47,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             }
         }
 
-        public TelaAluguel()
+        public TelaCadastroAluguelForm()
         {
             InitializeComponent();
         }

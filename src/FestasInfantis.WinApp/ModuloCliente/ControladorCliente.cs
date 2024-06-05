@@ -9,11 +9,11 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public class ControladorCliente : ControladorBase
     {
-        private RepositorioCliente repositorioCliente;
+        private IRepositorioCliente repositorioCliente;
         private TabelaClienteControl tabelaCliente;
 
         #region Construtor
-        public ControladorCliente(RepositorioCliente repositorio)
+        public ControladorCliente(IRepositorioCliente repositorio)
         {
             repositorioCliente = repositorio;
         }
