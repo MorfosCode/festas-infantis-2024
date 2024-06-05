@@ -86,8 +86,7 @@ namespace FestasInfantis.WinApp
             listagemCliente.Dock = DockStyle.Fill;
 
             pnlRegistros.Controls.Clear();
-<<<<<<< HEAD
-            pnlRegistros.Controls.Add(listagemContato);
+            pnlRegistros.Controls.Add(listagemCliente);
         }
 #region Cadastra clientes para facilitar nos testes
 =======
