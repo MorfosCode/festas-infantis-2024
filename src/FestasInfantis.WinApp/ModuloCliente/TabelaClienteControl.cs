@@ -13,6 +13,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public partial class TabelaClienteControl : UserControl
     {
+
+        #region Construtor
         public TabelaClienteControl()
         {
             InitializeComponent();
@@ -22,25 +24,25 @@ namespace FestasInfantis.WinApp.ModuloCliente
             grid.ConfigurarGridZebrado();
             
         }
+        #endregion
 
+        #region Atualiza registros na tabela
         public void AtualizarRegistros(List<Cliente> clientes)
         {
             grid.Rows.Clear();
             foreach (Cliente contato in clientes)
-                grid.Rows.Add
-                (
-                    contato.Id,
-                    contato.Nome,
-                    contato.Telefone,
-                    contato.Cpf
-                );
+                grid.Rows.Add(contato.Id, contato.Nome, contato.Telefone, contato.Cpf);
         }
+        #endregion
 
+        #region Retorna objeto que foi selecionado na tabela
         public int ObterRegistroSelecionado()
         {
             return grid.SelecionarId();
         }
+        #endregion
 
+        #region Constroi as colunas da tabela
         private static DataGridViewColumn[] obterColunas()
         {
             return new DataGridViewColumn[]
@@ -51,5 +53,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Cpf", HeaderText = "CPF" }
             };
         }
+        #endregion
     }
 }

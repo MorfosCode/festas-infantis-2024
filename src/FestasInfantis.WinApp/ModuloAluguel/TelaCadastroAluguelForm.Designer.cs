@@ -1,6 +1,6 @@
 ﻿namespace FestasInfantis.WinApp.ModuloAluguel
 {
-    partial class TelaAluguel
+    partial class TelaCadastroAluguelForm
     {
         /// <summary>
         /// Required designer variable.

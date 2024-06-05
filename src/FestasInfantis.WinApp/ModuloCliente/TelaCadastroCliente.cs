@@ -29,11 +29,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
             }
         }
 
+        #region Construtor
         public TelaCadastroCliente()
         {
             InitializeComponent();
         }
-
+        #endregion
 
         #region Eventos de botões
         private void btnLimpar_Click(object sender, EventArgs e)
