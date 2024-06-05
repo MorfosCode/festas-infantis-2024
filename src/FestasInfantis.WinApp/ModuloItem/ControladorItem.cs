@@ -36,6 +36,8 @@ namespace FestasInfantis.WinApp.ModuloItem
             Item novoItem = telaItem.Item;
             repositorioItem.Cadastrar(novoItem);
 
+            CarregarItens();
+
             TelaPrincipalForm
                 .Instancia
                 .AtualizarRodape($"O registro \"{novoItem.Descricao}\" foi criado com sucesso!");

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
-    public class RepositorioItem : RepositorioBase <Item>
+    public class RepositorioItem : RepositorioBaseEmMemoria <Item>
     {
     }
 }

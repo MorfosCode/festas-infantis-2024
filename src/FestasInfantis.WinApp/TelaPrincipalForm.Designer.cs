@@ -77,28 +77,27 @@
             // clientesMenuItem
             // 
             clientesMenuItem.Name = "clientesMenuItem";
-            clientesMenuItem.Size = new Size(180, 24);
+            clientesMenuItem.Size = new Size(135, 24);
             clientesMenuItem.Text = "Clientes";
-            clientesMenuItem.Click += clientesMenuItem_Click;
             // 
             // compromissosMenuItem
             // 
             compromissosMenuItem.Name = "compromissosMenuItem";
-            compromissosMenuItem.Size = new Size(180, 24);
+            compromissosMenuItem.Size = new Size(135, 24);
             compromissosMenuItem.Text = "Tema";
             compromissosMenuItem.Click += temaMenuItem_Click;
             // 
             // tarefasToolStripMenuItem
             // 
             tarefasToolStripMenuItem.Name = "tarefasToolStripMenuItem";
-            tarefasToolStripMenuItem.Size = new Size(180, 24);
+            tarefasToolStripMenuItem.Size = new Size(135, 24);
             tarefasToolStripMenuItem.Text = "Item";
             tarefasToolStripMenuItem.Click += itemToolStripMenuItem_Click;
             // 
             // aluguelToolStripMenuItem
             // 
             aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(224, 30);
+            aluguelToolStripMenuItem.Size = new Size(135, 24);
             aluguelToolStripMenuItem.Text = "Alugueis";
             aluguelToolStripMenuItem.Click += festasToolStripMenuItem_Click;
             // 
@@ -223,7 +222,6 @@
             btnConcluirAluguel.Name = "btnConcluirAluguel";
             btnConcluirAluguel.Padding = new Padding(5);
             btnConcluirAluguel.Size = new Size(38, 38);
-            btnConcluirAluguel.Click += btnConcluirAluguel_Click;
             // 
             // btnConfigurarDescontos
             // 
@@ -271,6 +269,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Festas Infantis";
+            Load += TelaPrincipalForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);

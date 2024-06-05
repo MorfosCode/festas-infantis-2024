@@ -28,14 +28,16 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Adicionar()
         {
-            TelaTemaForm telaTema = new TelaTemaForm();
-            DialogResult resultado = telaTema.ShowDialog();
+            TelaTemaForm telaCadastrarTema = new TelaTemaForm();
+            DialogResult resultado = telaCadastrarTema.ShowDialog();
 
             if (resultado != DialogResult.OK)
                 return;
 
-            Tema novoTema = telaTema.Tema;
+            Tema novoTema = telaCadastrarTema.Tema;
             repositorioTema.Cadastrar(novoTema);
+
+            CarregarTemas();
 
             TelaPrincipalForm
                 .Instancia

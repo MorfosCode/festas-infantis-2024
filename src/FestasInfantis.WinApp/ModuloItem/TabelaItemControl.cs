@@ -17,6 +17,7 @@ namespace FestasInfantis.WinApp.ModuloItem
         public TabelaItemControl()
         {
             InitializeComponent();
+
             grid.Columns.AddRange(obterColunas());
             grid.ConfigurarGridSomenteLeitura();
             grid.ConfigurarGridZebrado();
