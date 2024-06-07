@@ -69,6 +69,7 @@
             btnSalvar.TabIndex = 3;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // label2
             // 
@@ -84,6 +85,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(48, 23);
             txtId.TabIndex = 0;
+            txtId.Text = "0";
             txtId.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
@@ -118,7 +120,7 @@
             ListBoxItem.Name = "ListBoxItem";
             ListBoxItem.Size = new Size(304, 220);
             ListBoxItem.TabIndex = 8;
-            ListBoxItem.SelectedIndexChanged += ListBoxItem_SelectedIndexChanged;
+            ListBoxItem.ItemCheck += ListBoxItem_ItemCheck;
             // 
             // txtValor
             // 
@@ -154,13 +156,14 @@
             Controls.Add(btnSalvar);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaTemaForm";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Tema";
-            Load += TelaItemForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

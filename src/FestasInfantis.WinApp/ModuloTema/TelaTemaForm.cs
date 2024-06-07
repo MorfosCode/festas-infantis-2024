@@ -23,7 +23,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                 txtId.Text = value.Id.ToString();
                 txtTema.Text = value.Nome;
-                txtValor.Text = value.Valor.ToString();
+                txtValor.Text = value.ValorTotal.ToString();
 
             }
             get
@@ -32,22 +32,32 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
         }
 
-        public TelaTemaForm()
+        public TelaTemaForm(List<Item> itens)
         {
             InitializeComponent();
-            
+            CarregarItens(itens);
         }
-        
+
+        private void CarregarItens(List<Item> itens)
+        {
+
+            foreach (Item itensList in itens)
+            {
+                if (itensList.Tema == null)
+                    ListBoxItem.Items.Add(itensList);
+
+            }
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             string nome = txtTema.Text;
-            string valor = txtTema.Text;
-            List<Item> itens =ListBoxItem.CheckedItems.Cast<Item>().ToList();       
 
+            List<Item> itens = ListBoxItem.CheckedItems.Cast<Item>().ToList();
+            double valor = Convert.ToDouble(txtValor.Text);
 
-            tema = new Tema(nome, valor);
-          
+            tema = new Tema(nome, valor, itens);
+
             List<string> erros = tema.Validar();
 
             if (erros.Count > 0)
@@ -57,14 +67,28 @@ namespace FestasInfantis.WinApp.ModuloTema
                 DialogResult = DialogResult.None;
             }
         }
-        private void TelaItemForm_Load(object sender, EventArgs e)
+
+        private void ListBoxItem_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+            List<Item> itens = ListBoxItem.CheckedItems.Cast<Item>().ToList();
 
-        }
+            List<Item> marcado = new List<Item>();
 
-        private void ListBoxItem_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            foreach (Item itemMarcado in itens)
+                marcado.Add(itemMarcado);
 
+
+            if (e.NewValue == CheckState.Checked)
+                marcado.Add((Item)ListBoxItem.Items[e.Index]);
+
+            else marcado.Remove((Item)ListBoxItem.Items[e.Index]);
+
+            double valorTotal = 0;
+
+            foreach (Item itensList in marcado)
+                valorTotal += itensList.Valor;
+
+            txtValor.Text = valorTotal.ToString();
         }
     }
 }

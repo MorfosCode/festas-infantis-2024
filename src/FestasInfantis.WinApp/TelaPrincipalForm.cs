@@ -11,7 +11,7 @@ namespace FestasInfantis.WinApp
     {
         ControladorBase controlador;
 
-        RepositorioClienteEmMemoria repositorioClientes;
+        IRepositorioCliente repositorioClientes;
         RepositorioAluguel repositorioAluguel;
         RepositorioTema repositorioTema;
         RepositorioItem repositorioItem;
@@ -176,7 +176,7 @@ namespace FestasInfantis.WinApp
 
         private void temaMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorTema(repositorioTema);
+            controlador = new ControladorTema(repositorioTema, repositorioItem);
 
             lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
 

@@ -13,11 +13,13 @@ namespace FestasInfantis.WinApp.ModuloItem
     {
         
         public string Descricao{ get; set; }
-        public string Valor { get; set; }
+        public double Valor { get; set; }
 
-        public Item(string descriao, string valor)
+        public Tema Tema { get; set; }
+
+        public Item(string descricao, double valor)
         {
-            Descricao = descriao;
+            Descricao = descricao;
             Valor = valor;
         }
 
@@ -27,6 +29,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             Descricao = atualizar.Descricao;
             Valor = atualizar.Valor;
+            Tema = atualizar.Tema;
         }
 
         public override List<string> Validar()
@@ -40,5 +43,10 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             return erros;
         }
+        public override string ToString()
+        {
+            return $"Descrição: {Descricao} | Valor: R${Valor}";
+        }
+
     }
 }

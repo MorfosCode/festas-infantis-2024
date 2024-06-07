@@ -46,7 +46,7 @@
             labelId.AutoSize = true;
             labelId.Location = new Point(59, 24);
             labelId.Name = "labelId";
-            labelId.Size = new Size(34, 25);
+            labelId.Size = new Size(27, 20);
             labelId.TabIndex = 100;
             labelId.Text = "ID:";
             // 
@@ -55,7 +55,7 @@
             txtId.Enabled = false;
             txtId.Location = new Point(99, 21);
             txtId.Name = "txtId";
-            txtId.Size = new Size(100, 31);
+            txtId.Size = new Size(100, 27);
             txtId.TabIndex = 100;
             txtId.TextAlign = HorizontalAlignment.Right;
             // 
@@ -64,7 +64,7 @@
             labelNome.AutoSize = true;
             labelNome.Location = new Point(28, 70);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(65, 25);
+            labelNome.Size = new Size(53, 20);
             labelNome.TabIndex = 100;
             labelNome.Text = "Nome:";
             // 
@@ -73,7 +73,7 @@
             labelTelefone.AutoSize = true;
             labelTelefone.Location = new Point(12, 116);
             labelTelefone.Name = "labelTelefone";
-            labelTelefone.Size = new Size(81, 25);
+            labelTelefone.Size = new Size(69, 20);
             labelTelefone.TabIndex = 100;
             labelTelefone.Text = "Telefone:";
             // 
@@ -82,7 +82,7 @@
             labelCpf.AutoSize = true;
             labelCpf.Location = new Point(312, 116);
             labelCpf.Name = "labelCpf";
-            labelCpf.Size = new Size(46, 25);
+            labelCpf.Size = new Size(36, 20);
             labelCpf.TabIndex = 100;
             labelCpf.Text = "CPF:";
             // 
@@ -91,7 +91,7 @@
             txtNome.CharacterCasing = CharacterCasing.Upper;
             txtNome.Location = new Point(99, 67);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(400, 31);
+            txtNome.Size = new Size(400, 27);
             txtNome.TabIndex = 0;
             // 
             // btnSalvar
@@ -133,7 +133,7 @@
             maskedTxtTelefone.Location = new Point(99, 113);
             maskedTxtTelefone.Mask = "(00) 0 0000 - 0000";
             maskedTxtTelefone.Name = "maskedTxtTelefone";
-            maskedTxtTelefone.Size = new Size(158, 31);
+            maskedTxtTelefone.Size = new Size(158, 27);
             maskedTxtTelefone.TabIndex = 1;
             // 
             // maskedTxtCpf
@@ -141,12 +141,12 @@
             maskedTxtCpf.Location = new Point(364, 113);
             maskedTxtCpf.Mask = "000,000,000-00";
             maskedTxtCpf.Name = "maskedTxtCpf";
-            maskedTxtCpf.Size = new Size(135, 31);
+            maskedTxtCpf.Size = new Size(135, 27);
             maskedTxtCpf.TabIndex = 2;
             // 
             // TelaCadastroCliente
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(515, 216);
             Controls.Add(maskedTxtCpf);
@@ -166,7 +166,7 @@
             MinimizeBox = false;
             Name = "TelaCadastroCliente";
             ShowIcon = false;
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaCadastroCliente";
             ResumeLayout(false);
             PerformLayout();

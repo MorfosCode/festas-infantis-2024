@@ -263,7 +263,9 @@
             Controls.Add(toolStrip1);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
+            MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaPrincipalForm";
             ShowIcon = false;

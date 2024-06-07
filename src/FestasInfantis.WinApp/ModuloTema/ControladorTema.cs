@@ -1,5 +1,6 @@
 ﻿using eAgenda.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloItem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,14 @@ namespace FestasInfantis.WinApp.ModuloTema
     public class ControladorTema : ControladorBase
     {
         private RepositorioTema repositorioTema;
+        private RepositorioItem repositorioItem;
+        
         private TabelaTemaControl tabelaTema;
 
-        public ControladorTema(RepositorioTema repositorio)
+        public ControladorTema(RepositorioTema repositorio, RepositorioItem repositorioItem)
         {
             this.repositorioTema = repositorio;
+            this.repositorioItem = repositorioItem;
         }
 
         public override string TipoCadastro { get { return "Tema"; } }
@@ -28,7 +32,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Adicionar()
         {
-            TelaTemaForm telaCadastrarTema = new TelaTemaForm();
+            TelaTemaForm telaCadastrarTema = new TelaTemaForm(repositorioItem.SelecionarTodos());
             DialogResult resultado = telaCadastrarTema.ShowDialog();
 
             if (resultado != DialogResult.OK)
@@ -48,7 +52,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         public override void Editar()
         {
 
-            TelaTemaForm telaCadastroTema = new TelaTemaForm();
+            TelaTemaForm telaCadastroTema = new TelaTemaForm(repositorioItem.SelecionarTodos());
 
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
@@ -116,8 +120,12 @@ namespace FestasInfantis.WinApp.ModuloTema
         }
         private void CarregarTemas()
         {
-            List<Tema> tema = repositorioTema.SelecionarTodos();
-            tabelaTema.AtualizarRegistros(tema);
+            List<Tema> temas = repositorioTema.SelecionarTodos();
+            foreach (Tema tema in temas)
+            {
+                tema.ValorTotal = tema.CalcularTotal();
+            }
+            tabelaTema.AtualizarRegistros(temas);
         }
         public int ContarRegistros()
         {

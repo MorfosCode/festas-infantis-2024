@@ -1,24 +1,20 @@
 ﻿using eAgenda.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloItem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-   public class Tema : EntidadeBase
+    public class Tema : EntidadeBase
     {
         public string Nome { get; set; }
-        public string Valor { get; set; }
+        public double ValorTotal { get; set; }
 
-        public List<Item> itens {  get; set; }
+        public List<Item> Itens {  get; set; } = new List<Item>();
 
-        public Tema(string nome, string valor)
+        public Tema(string nome, double valor, List<Item> itens)
         {
             Nome = nome;
-            Valor = valor;
+            ValorTotal = CalcularTotal();
+            Itens = itens;
 
         }
 
@@ -27,8 +23,8 @@ namespace FestasInfantis.WinApp.ModuloTema
             Tema atualizar = (Tema)novoRegistro;
 
             Nome = atualizar.Nome;
-            Valor = atualizar.Valor;
-            itens = atualizar.itens;
+            ValorTotal = atualizar.ValorTotal;
+            Itens = atualizar.Itens;
         }
 
         public override List<string> Validar()
@@ -40,5 +36,17 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             return erros;
         }
+
+        public double CalcularTotal()
+        {
+            ValorTotal = 0;
+
+            foreach (Item item in Itens)
+                ValorTotal += item.Valor;
+
+            return ValorTotal;
+        }
+
+       
     }
 }

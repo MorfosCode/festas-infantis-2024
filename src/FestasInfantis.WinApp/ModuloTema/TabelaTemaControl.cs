@@ -31,8 +31,10 @@ namespace FestasInfantis.WinApp.ModuloTema
                 (
                     tema.Id,
                     tema.Nome,
-                    tema.Valor
-                    
+                   "R$" + tema.ValorTotal,
+                   tema.Itens.Count
+
+
                 );
         }
 
@@ -47,6 +49,7 @@ namespace FestasInfantis.WinApp.ModuloTema
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Id", HeaderText = "ID" },
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Tema", HeaderText = "Tema" },
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Valor", HeaderText = "Valor" },
+                  new DataGridViewTextBoxColumn { DataPropertyName = "NItens", HeaderText = "Nº de Itens" },
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Aluguel", HeaderText = "Aluguel" }
             };
         }
