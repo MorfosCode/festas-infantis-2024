@@ -15,6 +15,7 @@ namespace FestasInfantis.WinApp
         RepositorioAluguel repositorioAluguel;
         RepositorioTema repositorioTema;
         RepositorioItem repositorioItem;
+        RepositorioCliente repositorioCliente;
 
 
         public static TelaPrincipalForm Instancia { get; private set; }
@@ -31,6 +32,7 @@ namespace FestasInfantis.WinApp
             repositorioAluguel = new RepositorioAluguel();
             repositorioItem = new RepositorioItem();
             repositorioTema = new RepositorioTema();
+            repositorioCliente = new RepositorioCliente();
 
             //Cadastra registro de cliente para teste
             CadastrarClientesTeste();
@@ -195,6 +197,15 @@ namespace FestasInfantis.WinApp
         private void TelaPrincipalForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void clientesMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
         }
     }
 }
