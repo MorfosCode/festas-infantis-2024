@@ -5,19 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloItem;
+using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
     public class ControladorAluguel : ControladorBase
     {
-        private RepositorioAluguel repositorioAluguel;
-       // private TelaAluguel telaAluguel;
+        private IRepositorioAluguel repositorioAluguel;
+        private IRepositorioCliente repositorioCliente;
+        private IRepositorioTema repositorioTema;
+
         private TabelaAluguelControl tabelaAluguel;
 
         #region Construtor
-        public ControladorAluguel(RepositorioAluguel repositorio)
+        public ControladorAluguel(IRepositorioAluguel repositorio, IRepositorioCliente repositorioCliente, IRepositorioTema repositorioTema)
         {
-            repositorioAluguel = repositorio;
+            this.repositorioAluguel = repositorio;
+            this.repositorioCliente = repositorioCliente;
+            this.repositorioTema = repositorioTema;
         }
         #endregion
 

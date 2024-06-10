@@ -1,5 +1,6 @@
 ﻿using FestasInfantis.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloItem;
+using System.Drawing;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
@@ -52,6 +53,9 @@ namespace FestasInfantis.WinApp.ModuloTema
             return ValorTotal;
         }
 
-       
+        public override string ToString()
+        {
+            return $"Tema: {Nome} ";
+        }
     }
 }

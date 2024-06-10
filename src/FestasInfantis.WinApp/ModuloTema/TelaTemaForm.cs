@@ -1,5 +1,5 @@
 ﻿
-using FestasInfantis.WinApp.ModuloCliente;
+
 using FestasInfantis.WinApp.ModuloItem;
 using System;
 using System.Collections.Generic;

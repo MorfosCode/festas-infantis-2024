@@ -7,11 +7,8 @@ using FestasInfantis.ConsoleApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
-    public class RepositorioAluguel : RepositorioBaseEmMemoria<Aluguel>
+    public class RepositorioAluguel : RepositorioBaseEmMemoria<Aluguel>, IRepositorioAluguel
     {
-        internal void Cadastrar(Aluguel novoAluguel)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

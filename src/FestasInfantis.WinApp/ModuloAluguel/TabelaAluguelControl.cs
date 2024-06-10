@@ -42,7 +42,11 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         {
             return new DataGridViewColumn[]
             {
-                new DataGridViewTextBoxColumn{ DataPropertyName = "id", HeaderText = "ID" }
+                new DataGridViewTextBoxColumn{ DataPropertyName = "id", HeaderText = "ID"},
+                new DataGridViewTextBoxColumn{ DataPropertyName = "cliente", HeaderText = "Cliente" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Tema", HeaderText = "Tema" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "status", HeaderText = "Status" },  
+                new DataGridViewTextBoxColumn{ DataPropertyName = "dia Pagamento", HeaderText = "Pagamento" },
             };
         }
     }

@@ -331,6 +331,7 @@
             comboBoxClientes.Name = "comboBoxClientes";
             comboBoxClientes.Size = new Size(561, 27);
             comboBoxClientes.TabIndex = 0;
+            comboBoxClientes.SelectedIndexChanged += comboBoxClientes_SelectedIndexChanged;
             // 
             // lblTema
             // 
@@ -545,6 +546,7 @@
             btnSalvar.TabIndex = 4;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // TelaCadastroAluguelForm
             // 

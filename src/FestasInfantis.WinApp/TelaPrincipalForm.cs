@@ -12,7 +12,7 @@ namespace FestasInfantis.WinApp
         ControladorBase controlador;
 
         IRepositorioCliente repositorioClientes;
-        RepositorioAluguel repositorioAluguel;
+        IRepositorioAluguel repositorioAluguel;
         IRepositorioTema repositorioTema;
         IRepositorioItem repositorioItem;
         RepositorioCliente repositorioCliente;
@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp
             Instancia = this;
 
             repositorioClientes = new RepositorioClienteEmArquivo();
-            repositorioAluguel = new RepositorioAluguel();
+            repositorioAluguel = new RepositorioAluguelEmArquivo();
             repositorioItem = new RepositorioItemEmArquivo();
             repositorioTema = new RepositorioTemaEmArquivo();
             repositorioCliente = new RepositorioCliente();
@@ -166,7 +166,7 @@ namespace FestasInfantis.WinApp
         #endregion
         private void festasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorAluguel(repositorioAluguel);
+            controlador = new ControladorAluguel(repositorioAluguel, repositorioCliente, repositorioTema);
 
             lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
 
