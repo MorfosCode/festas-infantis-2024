@@ -97,10 +97,10 @@
             // 
             tabPageDadosFesta.Controls.Add(groupBoxEndereco);
             tabPageDadosFesta.Controls.Add(groupBoxDataHora);
-            tabPageDadosFesta.Location = new Point(4, 34);
+            tabPageDadosFesta.Location = new Point(4, 28);
             tabPageDadosFesta.Name = "tabPageDadosFesta";
             tabPageDadosFesta.Padding = new Padding(3);
-            tabPageDadosFesta.Size = new Size(715, 390);
+            tabPageDadosFesta.Size = new Size(715, 396);
             tabPageDadosFesta.TabIndex = 0;
             tabPageDadosFesta.Text = "Dados da Festa";
             tabPageDadosFesta.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             comboBoxEstados.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
             comboBoxEstados.Location = new Point(583, 134);
             comboBoxEstados.Name = "comboBoxEstados";
-            comboBoxEstados.Size = new Size(96, 33);
+            comboBoxEstados.Size = new Size(96, 27);
             comboBoxEstados.TabIndex = 7;
             // 
             // txtCidade
@@ -138,14 +138,14 @@
             txtCidade.CharacterCasing = CharacterCasing.Upper;
             txtCidade.Location = new Point(179, 135);
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(350, 31);
+            txtCidade.Size = new Size(350, 27);
             txtCidade.TabIndex = 6;
             // 
             // txtNumeroEndereco
             // 
             txtNumeroEndereco.Location = new Point(179, 88);
             txtNumeroEndereco.Name = "txtNumeroEndereco";
-            txtNumeroEndereco.Size = new Size(101, 31);
+            txtNumeroEndereco.Size = new Size(101, 27);
             txtNumeroEndereco.TabIndex = 4;
             txtNumeroEndereco.TextAlign = HorizontalAlignment.Right;
             // 
@@ -154,7 +154,7 @@
             txtBairro.CharacterCasing = CharacterCasing.Upper;
             txtBairro.Location = new Point(354, 88);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(325, 31);
+            txtBairro.Size = new Size(325, 27);
             txtBairro.TabIndex = 5;
             // 
             // txtRua
@@ -162,7 +162,7 @@
             txtRua.CharacterCasing = CharacterCasing.Upper;
             txtRua.Location = new Point(179, 39);
             txtRua.Name = "txtRua";
-            txtRua.Size = new Size(500, 31);
+            txtRua.Size = new Size(500, 27);
             txtRua.TabIndex = 3;
             // 
             // lblNumero
@@ -170,7 +170,7 @@
             lblNumero.AutoSize = true;
             lblNumero.Location = new Point(144, 91);
             lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(33, 25);
+            lblNumero.Size = new Size(26, 20);
             lblNumero.TabIndex = 100;
             lblNumero.Text = "Nº";
             // 
@@ -179,7 +179,7 @@
             lblUf.AutoSize = true;
             lblUf.Location = new Point(544, 138);
             lblUf.Name = "lblUf";
-            lblUf.Size = new Size(37, 25);
+            lblUf.Size = new Size(29, 20);
             lblUf.TabIndex = 100;
             lblUf.Text = "UF:";
             // 
@@ -188,7 +188,7 @@
             lblBairro.AutoSize = true;
             lblBairro.Location = new Point(290, 91);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(62, 25);
+            lblBairro.Size = new Size(52, 20);
             lblBairro.TabIndex = 100;
             lblBairro.Text = "Bairro:";
             // 
@@ -197,7 +197,7 @@
             lblCidade.AutoSize = true;
             lblCidade.Location = new Point(111, 138);
             lblCidade.Name = "lblCidade";
-            lblCidade.Size = new Size(67, 25);
+            lblCidade.Size = new Size(56, 20);
             lblCidade.TabIndex = 100;
             lblCidade.Text = "Cidade";
             // 
@@ -206,7 +206,7 @@
             lblRua.AutoSize = true;
             lblRua.Location = new Point(131, 42);
             lblRua.Name = "lblRua";
-            lblRua.Size = new Size(46, 25);
+            lblRua.Size = new Size(37, 20);
             lblRua.TabIndex = 100;
             lblRua.Text = "Rua:";
             // 
@@ -232,7 +232,7 @@
             dateTimePickerHoraTermino.Location = new Point(179, 126);
             dateTimePickerHoraTermino.Name = "dateTimePickerHoraTermino";
             dateTimePickerHoraTermino.ShowUpDown = true;
-            dateTimePickerHoraTermino.Size = new Size(101, 31);
+            dateTimePickerHoraTermino.Size = new Size(101, 27);
             dateTimePickerHoraTermino.TabIndex = 2;
             // 
             // dateTimePickerHoraInicio
@@ -242,7 +242,7 @@
             dateTimePickerHoraInicio.Location = new Point(179, 78);
             dateTimePickerHoraInicio.Name = "dateTimePickerHoraInicio";
             dateTimePickerHoraInicio.ShowUpDown = true;
-            dateTimePickerHoraInicio.Size = new Size(101, 31);
+            dateTimePickerHoraInicio.Size = new Size(101, 27);
             dateTimePickerHoraInicio.TabIndex = 1;
             // 
             // dateTimePickerDataFesta
@@ -250,7 +250,7 @@
             dateTimePickerDataFesta.Format = DateTimePickerFormat.Short;
             dateTimePickerDataFesta.Location = new Point(179, 30);
             dateTimePickerDataFesta.Name = "dateTimePickerDataFesta";
-            dateTimePickerDataFesta.Size = new Size(143, 31);
+            dateTimePickerDataFesta.Size = new Size(143, 27);
             dateTimePickerDataFesta.TabIndex = 0;
             // 
             // lblHoraTermino
@@ -258,7 +258,7 @@
             lblHoraTermino.AutoSize = true;
             lblHoraTermino.Location = new Point(29, 129);
             lblHoraTermino.Name = "lblHoraTermino";
-            lblHoraTermino.Size = new Size(148, 25);
+            lblHoraTermino.Size = new Size(124, 20);
             lblHoraTermino.TabIndex = 100;
             lblHoraTermino.Text = "Hora de Término:";
             // 
@@ -267,7 +267,7 @@
             lblHoraInicio.AutoSize = true;
             lblHoraInicio.Location = new Point(50, 81);
             lblHoraInicio.Name = "lblHoraInicio";
-            lblHoraInicio.Size = new Size(127, 25);
+            lblHoraInicio.Size = new Size(106, 20);
             lblHoraInicio.TabIndex = 100;
             lblHoraInicio.Text = "Hora de Início:";
             // 
@@ -276,7 +276,7 @@
             lblData.AutoSize = true;
             lblData.Location = new Point(53, 33);
             lblData.Name = "lblData";
-            lblData.Size = new Size(124, 25);
+            lblData.Size = new Size(103, 20);
             lblData.TabIndex = 100;
             lblData.Text = "Data da Festa:";
             // 
@@ -284,10 +284,10 @@
             // 
             tabPageDadosAluguel.Controls.Add(groupBoxDadosCliente);
             tabPageDadosAluguel.Controls.Add(groupBoxDadosPagamento);
-            tabPageDadosAluguel.Location = new Point(4, 34);
+            tabPageDadosAluguel.Location = new Point(4, 28);
             tabPageDadosAluguel.Name = "tabPageDadosAluguel";
             tabPageDadosAluguel.Padding = new Padding(3);
-            tabPageDadosAluguel.Size = new Size(715, 390);
+            tabPageDadosAluguel.Size = new Size(715, 396);
             tabPageDadosAluguel.TabIndex = 1;
             tabPageDadosAluguel.Text = "Dados do Aluguel";
             tabPageDadosAluguel.UseVisualStyleBackColor = true;
@@ -312,7 +312,7 @@
             comboBoxSinal.FormattingEnabled = true;
             comboBoxSinal.Location = new Point(498, 81);
             comboBoxSinal.Name = "comboBoxSinal";
-            comboBoxSinal.Size = new Size(135, 33);
+            comboBoxSinal.Size = new Size(135, 27);
             comboBoxSinal.TabIndex = 2;
             // 
             // comboBoxTemas
@@ -321,7 +321,7 @@
             comboBoxTemas.Location = new Point(72, 81);
             comboBoxTemas.MaxLength = 1;
             comboBoxTemas.Name = "comboBoxTemas";
-            comboBoxTemas.Size = new Size(361, 33);
+            comboBoxTemas.Size = new Size(361, 27);
             comboBoxTemas.TabIndex = 1;
             // 
             // comboBoxClientes
@@ -329,7 +329,7 @@
             comboBoxClientes.FormattingEnabled = true;
             comboBoxClientes.Location = new Point(72, 27);
             comboBoxClientes.Name = "comboBoxClientes";
-            comboBoxClientes.Size = new Size(561, 33);
+            comboBoxClientes.Size = new Size(561, 27);
             comboBoxClientes.TabIndex = 0;
             // 
             // lblTema
@@ -337,7 +337,7 @@
             lblTema.AutoSize = true;
             lblTema.Location = new Point(18, 84);
             lblTema.Name = "lblTema";
-            lblTema.Size = new Size(57, 25);
+            lblTema.Size = new Size(48, 20);
             lblTema.TabIndex = 100;
             lblTema.Text = "Tema:";
             // 
@@ -346,7 +346,7 @@
             lblSinal.AutoSize = true;
             lblSinal.Location = new Point(449, 84);
             lblSinal.Name = "lblSinal";
-            lblSinal.Size = new Size(53, 25);
+            lblSinal.Size = new Size(44, 20);
             lblSinal.TabIndex = 100;
             lblSinal.Text = "Sinal:";
             // 
@@ -355,7 +355,7 @@
             lblCliente.AutoSize = true;
             lblCliente.Location = new Point(6, 31);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(69, 25);
+            lblCliente.Size = new Size(58, 20);
             lblCliente.TabIndex = 100;
             lblCliente.Text = "Cliente:";
             // 
@@ -385,7 +385,7 @@
             lblPorcento.AutoSize = true;
             lblPorcento.Location = new Point(146, 100);
             lblPorcento.Name = "lblPorcento";
-            lblPorcento.Size = new Size(27, 25);
+            lblPorcento.Size = new Size(21, 20);
             lblPorcento.TabIndex = 2;
             lblPorcento.Text = "%";
             // 
@@ -395,7 +395,7 @@
             lblValorPendente.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblValorPendente.Location = new Point(370, 194);
             lblValorPendente.Name = "lblValorPendente";
-            lblValorPendente.Size = new Size(201, 25);
+            lblValorPendente.Size = new Size(166, 20);
             lblValorPendente.TabIndex = 100;
             lblValorPendente.Text = "VALOR PENDENTE R$:";
             // 
@@ -405,7 +405,7 @@
             lblTotalComDesconto.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalComDesconto.Location = new Point(324, 147);
             lblTotalComDesconto.Name = "lblTotalComDesconto";
-            lblTotalComDesconto.Size = new Size(247, 25);
+            lblTotalComDesconto.Size = new Size(201, 20);
             lblTotalComDesconto.TabIndex = 100;
             lblTotalComDesconto.Text = "TOTAL COM DESCONTO R$:";
             lblTotalComDesconto.Click += label4_Click;
@@ -415,7 +415,7 @@
             lblValorSinal.AutoSize = true;
             lblValorSinal.Location = new Point(419, 100);
             lblValorSinal.Name = "lblValorSinal";
-            lblValorSinal.Size = new Size(151, 25);
+            lblValorSinal.Size = new Size(125, 20);
             lblValorSinal.TabIndex = 100;
             lblValorSinal.Text = "Valor do Sinal R$:";
             lblValorSinal.Click += lblValorSinal_Click;
@@ -425,7 +425,7 @@
             lblTotal.AutoSize = true;
             lblTotal.Location = new Point(183, 100);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(91, 25);
+            lblTotal.Size = new Size(74, 20);
             lblTotal.TabIndex = 100;
             lblTotal.Text = "TOTAL R$:";
             // 
@@ -434,7 +434,7 @@
             lblPercentualDEsconto.AutoSize = true;
             lblPercentualDEsconto.Location = new Point(6, 100);
             lblPercentualDEsconto.Name = "lblPercentualDEsconto";
-            lblPercentualDEsconto.Size = new Size(78, 25);
+            lblPercentualDEsconto.Size = new Size(63, 20);
             lblPercentualDEsconto.TabIndex = 100;
             lblPercentualDEsconto.Text = "% Desc.:";
             // 
@@ -443,7 +443,7 @@
             txtTotalComDesconto.Enabled = false;
             txtTotalComDesconto.Location = new Point(572, 144);
             txtTotalComDesconto.Name = "txtTotalComDesconto";
-            txtTotalComDesconto.Size = new Size(125, 31);
+            txtTotalComDesconto.Size = new Size(125, 27);
             txtTotalComDesconto.TabIndex = 1;
             txtTotalComDesconto.TextAlign = HorizontalAlignment.Right;
             txtTotalComDesconto.TextChanged += textBox9_TextChanged;
@@ -453,7 +453,7 @@
             txtValorSinal.Enabled = false;
             txtValorSinal.Location = new Point(572, 97);
             txtValorSinal.Name = "txtValorSinal";
-            txtValorSinal.Size = new Size(125, 31);
+            txtValorSinal.Size = new Size(125, 27);
             txtValorSinal.TabIndex = 1;
             txtValorSinal.TextAlign = HorizontalAlignment.Right;
             // 
@@ -462,7 +462,7 @@
             txtValorPendente.Enabled = false;
             txtValorPendente.Location = new Point(572, 191);
             txtValorPendente.Name = "txtValorPendente";
-            txtValorPendente.Size = new Size(125, 31);
+            txtValorPendente.Size = new Size(125, 27);
             txtValorPendente.TabIndex = 1;
             txtValorPendente.TextAlign = HorizontalAlignment.Right;
             txtValorPendente.TextChanged += textBox7_TextChanged;
@@ -472,7 +472,7 @@
             txtTotal.Enabled = false;
             txtTotal.Location = new Point(276, 97);
             txtTotal.Name = "txtTotal";
-            txtTotal.Size = new Size(125, 31);
+            txtTotal.Size = new Size(125, 27);
             txtTotal.TabIndex = 1;
             txtTotal.TextAlign = HorizontalAlignment.Right;
             // 
@@ -481,7 +481,7 @@
             txtDesconto.Enabled = false;
             txtDesconto.Location = new Point(86, 97);
             txtDesconto.Name = "txtDesconto";
-            txtDesconto.Size = new Size(58, 31);
+            txtDesconto.Size = new Size(58, 27);
             txtDesconto.TabIndex = 1;
             txtDesconto.TextAlign = HorizontalAlignment.Right;
             // 
@@ -500,7 +500,7 @@
             lblId.AutoSize = true;
             lblId.Location = new Point(16, 24);
             lblId.Name = "lblId";
-            lblId.Size = new Size(34, 25);
+            lblId.Size = new Size(27, 20);
             lblId.TabIndex = 1;
             lblId.Text = "ID:";
             // 
@@ -509,7 +509,7 @@
             txtId.Enabled = false;
             txtId.Location = new Point(56, 21);
             txtId.Name = "txtId";
-            txtId.Size = new Size(100, 31);
+            txtId.Size = new Size(100, 27);
             txtId.TabIndex = 100;
             txtId.TextAlign = HorizontalAlignment.Right;
             // 
@@ -546,9 +546,9 @@
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // TelaAluguel
+            // TelaCadastroAluguelForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(735, 548);
             Controls.Add(btnSalvar);
@@ -558,11 +558,11 @@
             Controls.Add(lblId);
             Controls.Add(tabControlAlugueis);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "TelaAluguel";
+            Name = "TelaCadastroAluguelForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "TelaAluguel";

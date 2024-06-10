@@ -121,10 +121,12 @@
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaCadastroItem";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Item";
             Load += TelaCadastroItem_Load;
             ResumeLayout(false);

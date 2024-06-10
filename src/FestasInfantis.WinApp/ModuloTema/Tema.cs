@@ -1,22 +1,19 @@
 ﻿using FestasInfantis.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloItem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-   public class Tema : EntidadeBase
+    public class Tema : EntidadeBase
     {
         public string Nome { get; set; }
-        public int Valor { get; set; }
-        public List<Item> Itens {  get; set; }
+        public double ValorTotal { get; set; }
 
-        public Tema(string nome, List<Item> itens)
+        public List<Item> Itens {  get; set; } = new List<Item>();
+
+        public Tema(string nome, double valor, List<Item> itens)
         {
             Nome = nome;
+            ValorTotal = CalcularTotal();
             Itens = itens;
 
         }
@@ -26,7 +23,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             Tema atualizar = (Tema)novoRegistro;
 
             Nome = atualizar.Nome;
-            Valor = atualizar.Valor;
+            ValorTotal = atualizar.ValorTotal;
             Itens = atualizar.Itens;
         }
 
@@ -40,21 +37,16 @@ namespace FestasInfantis.WinApp.ModuloTema
             return erros;
         }
 
-        internal void MarcarItens()
+        public double CalcularTotal()
         {
-            foreach (Item item in Itens)
-            {
-                item.Descricao = Nome;
-            }
-        }
-        internal int ValorTema()
-        {
-            valor = 0;
+            ValorTotal = 0;
 
             foreach (Item item in Itens)
-                valor += item.Valor;
+                ValorTotal += item.Valor;
 
-            return valor;
+            return ValorTotal;
         }
+
+       
     }
 }
