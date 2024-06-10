@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using eAgenda.ConsoleApp.Compartilhado;
+using FestasInfantis.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp.ModuloAluguel

@@ -1,4 +1,4 @@
-﻿using eAgenda.WinApp.Compartilhado;
+﻿using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,9 @@ namespace FestasInfantis.WinApp.ModuloTema
         private RepositorioTema repositorioTema;
         private TabelaTemaControl tabelaTema;
 
-        public ControladorTema(RepositorioTema repositorio)
+        public ControladorTema(RepositorioTema repositorioTema)
         {
-            this.repositorioTema = repositorio;
+            this.repositorioTema = repositorioTema;
         }
 
         public override string TipoCadastro { get { return "Tema"; } }
@@ -28,7 +28,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Adicionar()
         {
-            TelaTemaForm telaCadastrarTema = new TelaTemaForm();
+            TelaCadastro telaCadastrarTema = new TelaCadastro();
             DialogResult resultado = telaCadastrarTema.ShowDialog();
 
             if (resultado != DialogResult.OK)
@@ -48,7 +48,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         public override void Editar()
         {
 
-            TelaTemaForm telaCadastroTema = new TelaTemaForm();
+            TelaCadastro telaCadastroTema = new TelaCadastro();
 
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 

@@ -1,4 +1,4 @@
-using eAgenda.WinApp.Compartilhado;
+using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloAluguel;
 
 using FestasInfantis.WinApp.ModuloCliente;

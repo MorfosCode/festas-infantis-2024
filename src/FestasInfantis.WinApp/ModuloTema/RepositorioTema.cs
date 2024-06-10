@@ -1,4 +1,4 @@
-﻿using eAgenda.ConsoleApp.Compartilhado;
+﻿using FestasInfantis.ConsoleApp.Compartilhado;
 
 using System;
 using System.Collections.Generic;

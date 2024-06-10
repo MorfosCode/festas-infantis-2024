@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using eAgenda.ConsoleApp.Compartilhado;
+using FestasInfantis.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp.Compartilhado

@@ -33,7 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            txtDescrição = new TextBox();
+            txtDescricao = new TextBox();
             txtValor = new TextBox();
             txtId = new TextBox();
             SuspendLayout();
@@ -88,10 +88,10 @@
             // 
             // txtDescrição
             // 
-            txtDescrição.Location = new Point(108, 90);
-            txtDescrição.Name = "txtDescrição";
-            txtDescrição.Size = new Size(249, 23);
-            txtDescrição.TabIndex = 5;
+            txtDescricao.Location = new Point(108, 90);
+            txtDescricao.Name = "txtDescrição";
+            txtDescricao.Size = new Size(249, 23);
+            txtDescricao.TabIndex = 5;
             // 
             // txtValor
             // 
@@ -115,7 +115,7 @@
             ClientSize = new Size(388, 194);
             Controls.Add(txtId);
             Controls.Add(txtValor);
-            Controls.Add(txtDescrição);
+            Controls.Add(txtDescricao);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -138,7 +138,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox txtDescrição;
+        private TextBox txtDescricao;
         private TextBox txtValor;
         private TextBox txtId;
     }

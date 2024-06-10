@@ -1,4 +1,4 @@
-﻿using eAgenda.ConsoleApp.Compartilhado;
+﻿using FestasInfantis.ConsoleApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloTema;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,10 @@ namespace FestasInfantis.WinApp.ModuloItem
     {
         
         public string Descricao{ get; set; }
-        public string Valor { get; set; }
+        public int Valor { get; set; }
+        public Tema Tema { get; set;}
 
-        public Item(string descriao, string valor)
+        public Item(string descriao, int valor)
         {
             Descricao = descriao;
             Valor = valor;

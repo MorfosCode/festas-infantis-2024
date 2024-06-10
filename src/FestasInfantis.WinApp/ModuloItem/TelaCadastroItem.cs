@@ -19,8 +19,8 @@ namespace FestasInfantis.WinApp.ModuloItem
             set
             {
                 txtId.Text = value.Id.ToString();
-                txtDescrição.Text = value.Descricao;
-                txtValor.Text = value.Valor;
+                txtDescricao.Text = value.Descricao;
+                txtValor.Text = value.Valor.ToString();
 
             }
             get
@@ -34,8 +34,8 @@ namespace FestasInfantis.WinApp.ModuloItem
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string nome = txtDescrição.Text;
-            string valor = txtValor.Text;
+            string nome = txtDescricao.Text;
+            string valor = Convert.ToInt32(txtValor.Value);
 
 
             item = new Item(nome, valor);

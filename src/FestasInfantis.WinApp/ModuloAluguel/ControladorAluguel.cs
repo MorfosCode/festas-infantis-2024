@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using eAgenda.WinApp.Compartilhado;
+using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
@@ -11,7 +11,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
     public class ControladorAluguel : ControladorBase
     {
         private RepositorioAluguel repositorioAluguel;
-        private TelaCadastroAluguelForm telaAluguel;
+       // private TelaAluguel telaAluguel;
         private TabelaAluguelControl tabelaAluguel;
 
         #region Construtor
