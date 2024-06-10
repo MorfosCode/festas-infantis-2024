@@ -10,6 +10,11 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public List<Item> Itens {  get; set; } = new List<Item>();
 
+        public Tema()
+        {
+          
+
+        } 
         public Tema(string nome, double valor, List<Item> itens)
         {
             Nome = nome;

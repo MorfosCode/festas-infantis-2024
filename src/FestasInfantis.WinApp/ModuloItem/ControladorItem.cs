@@ -10,10 +10,10 @@ namespace FestasInfantis.WinApp.ModuloItem
 {
     public class ControladorItem : ControladorBase
     {
-        private RepositorioItem repositorioItem;
+        private IRepositorioItem repositorioItem;
         private TabelaItemControl tabelaItem;
 
-        public ControladorItem(RepositorioItem repositorioItem)
+        public ControladorItem(IRepositorioItem repositorioItem)
         {
           this.repositorioItem = repositorioItem;
         }

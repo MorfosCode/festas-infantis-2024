@@ -13,8 +13,8 @@ namespace FestasInfantis.WinApp
 
         IRepositorioCliente repositorioClientes;
         RepositorioAluguel repositorioAluguel;
-        RepositorioTema repositorioTema;
-        RepositorioItem repositorioItem;
+        IRepositorioTema repositorioTema;
+        IRepositorioItem repositorioItem;
         RepositorioCliente repositorioCliente;
 
 
@@ -28,10 +28,10 @@ namespace FestasInfantis.WinApp
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
 
-            //  repositorioClientes = new RepositorioClienteEmArquivo();
+            repositorioClientes = new RepositorioClienteEmArquivo();
             repositorioAluguel = new RepositorioAluguel();
-            repositorioItem = new RepositorioItem();
-            repositorioTema = new RepositorioTema();
+            repositorioItem = new RepositorioItemEmArquivo();
+            repositorioTema = new RepositorioTemaEmArquivo();
             repositorioCliente = new RepositorioCliente();
 
             //Cadastra registro de cliente para teste

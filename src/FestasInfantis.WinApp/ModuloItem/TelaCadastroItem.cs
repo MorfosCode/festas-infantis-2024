@@ -19,7 +19,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             set
             {
                 txtId.Text = value.Id.ToString();
-                txtDescrição.Text = value.Descricao;
+                txtDescricao.Text = value.Descricao;
                 txtValor.Text = value.Valor.ToString();
 
             }
@@ -34,7 +34,7 @@ namespace FestasInfantis.WinApp.ModuloItem
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string nome = txtDescrição.Text;
+            string nome = txtDescricao.Text;
             double valor = Convert.ToDouble(txtValor.Text);
 
 

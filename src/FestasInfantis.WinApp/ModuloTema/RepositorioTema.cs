@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public class RepositorioTema : RepositorioBaseEmMemoria <Tema>
+    public class RepositorioTema : RepositorioBaseEmMemoria<Tema>
     {
-
-
+        
     }
 }

@@ -17,6 +17,10 @@ namespace FestasInfantis.WinApp.ModuloItem
 
         public Tema Tema { get; set; }
 
+        public Item()
+        {
+           
+        }
         public Item(string descricao, double valor)
         {
             Descricao = descricao;
