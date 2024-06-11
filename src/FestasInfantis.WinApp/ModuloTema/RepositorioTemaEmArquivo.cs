@@ -1,4 +1,9 @@
-﻿using FestasInfantis.WinApp.Compartilhado;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
@@ -6,6 +11,7 @@ namespace FestasInfantis.WinApp.ModuloTema
     {
         public RepositorioTemaEmArquivo() : base("tema.json")
         {
+
         }
     }
 }

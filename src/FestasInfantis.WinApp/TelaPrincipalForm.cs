@@ -1,7 +1,7 @@
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloAluguel;
-
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloConfiguracao;
 using FestasInfantis.WinApp.ModuloItem;
 using FestasInfantis.WinApp.ModuloTema;
 
@@ -10,13 +10,14 @@ namespace FestasInfantis.WinApp
     public partial class TelaPrincipalForm : Form
     {
         ControladorBase controlador;
+        ControladorConfiguracao controladorConfiguracao;
 
-        IRepositorioCliente repositorioClientes;
-        IRepositorioAluguel repositorioAluguel;
+        IRepositorioCliente repositorioCliente;
         IRepositorioTema repositorioTema;
+        RepositorioAluguel repositorioAluguel;
         IRepositorioItem repositorioItem;
-        RepositorioCliente repositorioCliente;
-
+        
+        RepositorioConfiguracaoEmArquivo repositorioConfiguracao;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -28,11 +29,11 @@ namespace FestasInfantis.WinApp
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
 
-            repositorioClientes = new RepositorioClienteEmArquivo();
-            repositorioAluguel = new RepositorioAluguelEmArquivo();
+            repositorioCliente = new RepositorioClienteEmArquivo();
+            repositorioAluguel = new RepositorioAluguel();
             repositorioItem = new RepositorioItemEmArquivo();
             repositorioTema = new RepositorioTemaEmArquivo();
-            repositorioCliente = new RepositorioCliente();
+            repositorioConfiguracao = new RepositorioConfiguracaoEmArquivo();
 
             //Cadastra registro de cliente para teste
             CadastrarClientesTeste();
@@ -53,6 +54,13 @@ namespace FestasInfantis.WinApp
 
             ConfigurarToolBox(controladorSelecionado);
             ConfigurarListagem(controladorSelecionado);
+        }
+
+        private void ConfigurarTelaPrincipalConfiguracao(ControladorConfiguracao controladorConfiguracao)
+        {
+            lblTipoCadastro.Text = controladorConfiguracao.TipoCadastro;
+
+            controladorConfiguracao.Editar();
         }
         #endregion
 
@@ -87,7 +95,6 @@ namespace FestasInfantis.WinApp
             UserControl listagemCliente = controladorSelecionado.ObterListagem();
             listagemCliente.Dock = DockStyle.Fill;
 
-
             pnlRegistros.Controls.Clear();
             pnlRegistros.Controls.Add(listagemCliente);
 
@@ -96,7 +103,6 @@ namespace FestasInfantis.WinApp
         #endregion
 
         #region Cadastra clientes para facilitar nos testes
-
         private void CadastrarClientesTeste()
         {
             //List<Cliente> clientes = new List<Cliente>()
@@ -113,12 +119,11 @@ namespace FestasInfantis.WinApp
             //    new Cliente("MÁRCIO BECKER", "(49) 9 9812 - 3456", "044.173.999-98"),
             //};
 
-            //repositorioClientes.CadastrarVarios(clientes);
+            //repositorioCliente.CadastrarVarios(clientes);
         }
         #endregion
 
         #region Eventos de botões
-
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
@@ -132,17 +137,25 @@ namespace FestasInfantis.WinApp
         {
             controlador.Excluir();
         }
+
+        private void btnConfigurarDescontos_Click(object sender, EventArgs e)
+        {
+            controladorConfiguracao = new ControladorConfiguracao(repositorioConfiguracao);
+
+            lblTipoCadastro.Text = controladorConfiguracao.TipoCadastro;
+
+            ConfigurarTelaPrincipalConfiguracao(controladorConfiguracao);
+        }
         private void btnConcluirAluguel_Click(object sender, EventArgs e)
         {
 
         }
-
         #endregion
 
         #region Eventos de menu
         /* private void clientesMenuItem_Click(object sender, EventArgs e)
          {
-             controlador = new ControladorCliente(repositorioClientes);
+             controlador = new ControladorCliente(repositorioCliente);
 
              lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
 
@@ -151,7 +164,7 @@ namespace FestasInfantis.WinApp
 
           private void clientesMenuItem_Click(object sender, EventArgs e)
           {
-              controlador = new ControladorCliente(repositorioClientes);
+              controlador = new ControladorCliente(repositorioCliente);
 
               lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
 
@@ -164,6 +177,7 @@ namespace FestasInfantis.WinApp
 
           */
         #endregion
+
         private void festasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorAluguel(repositorioAluguel, repositorioCliente, repositorioTema);
@@ -172,9 +186,6 @@ namespace FestasInfantis.WinApp
 
             ConfigurarTelaPrincipal(controlador);
         }
-
-
-
 
         private void temaMenuItem_Click(object sender, EventArgs e)
         {

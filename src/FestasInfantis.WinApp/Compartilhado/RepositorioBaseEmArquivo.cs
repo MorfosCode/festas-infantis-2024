@@ -22,6 +22,9 @@ namespace FestasInfantis.WinApp.Compartilhado
             caminho = $"C:\\eAgenda\\repositorio\\{nomeArquivo}";
 
             registros = DeserializarRegistros();
+
+            if(registros.Count > 0)
+                contadorId = registros.Max(x => x.Id) + 1;
         }
         #endregion
 

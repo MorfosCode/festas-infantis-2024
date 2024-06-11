@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
@@ -14,6 +15,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         void CadastrarVarios(List<Aluguel> alugueis);
 
         bool Editar(int id, Aluguel aluguelEditado);
+
         bool Excluir(int id);
         List<Aluguel> SelecionarAluguelConcluido();
         List<Aluguel> SelecionarAluguelPendente();

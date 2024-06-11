@@ -31,16 +31,60 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         public DateTime dataPagamento { get; set; }
         public bool statusConcluido { get; set; } = false;
 
-        public Festa Festa { get; set; }
+        }
 
+        public Aluguel
+            (
+                Cliente cliente,
+                Tema tema,
+                Festa festa,
+                int percentualEntrada,
+                int percentualDesconto,
+                DateTime dataPagamento,
+                string status
+            )
+        {
+            this.Cliente = cliente;
+            this.Tema = tema;
+            this.Festa = festa;
+            this.PercentualEntrada = percentualEntrada;
+            this.PercentualDesconto = percentualDesconto;
+            this.DataPagamento = dataPagamento;
+            this.Status = status;
+        }
+        #endregion
+
+        #region Atualização de registro
         public override void AtualizarRegistro(EntidadeBase novoRegistro)
         {
-            throw new NotImplementedException();
-        }
+            Aluguel aluguelAtualizado = (Aluguel)novoRegistro;
 
+            Cliente = aluguelAtualizado.Cliente;
+            Tema = aluguelAtualizado.Tema;
+            Festa = aluguelAtualizado.Festa;
+            PercentualEntrada = aluguelAtualizado.PercentualEntrada;
+            PercentualDesconto = aluguelAtualizado.PercentualDesconto;
+            DataPagamento = aluguelAtualizado.DataPagamento;
+            Status = aluguelAtualizado.Status;
+        }
+        #endregion
+
+        #region Validação dos dados de entrada
         public override List<string> Validar()
         {
-            throw new NotImplementedException();
+            List<string> erros = new List<string>();
+
+            if (string.IsNullOrEmpty(Cliente.Nome.Trim()))
+                erros.Add("O campo \"NOME DO CLIENTE\" é obrigatório");
+            if (string.IsNullOrEmpty(Tema.Nome.Trim()))
+                erros.Add("O campo \"DESCRIÇÃO DO TEMA\" é obrigatório");
+            if (string.IsNullOrEmpty(PercentualEntrada.ToString().Trim()))
+                erros.Add("O campo \"PERCENTUAL DE ENTRADA\" é obrigatório");
+            if (string.IsNullOrEmpty(PercentualDesconto.ToString().Trim()))
+                erros.Add("O campo \"PERCENTUAL DE DESCONTO\" é obrigatório");
+
+            return erros;
         }
+        #endregion
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
@@ -11,6 +12,7 @@ namespace FestasInfantis.WinApp.ModuloItem
     {
         public RepositorioItemEmArquivo() : base("item.json")
         {
+
         }
     }
 }

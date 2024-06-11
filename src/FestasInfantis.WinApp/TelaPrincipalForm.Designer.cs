@@ -77,28 +77,28 @@
             // clientesMenuItem
             // 
             clientesMenuItem.Name = "clientesMenuItem";
-            clientesMenuItem.Size = new Size(135, 24);
+            clientesMenuItem.Size = new Size(171, 30);
             clientesMenuItem.Text = "Clientes";
             clientesMenuItem.Click += clientesMenuItem_Click;
             // 
             // compromissosMenuItem
             // 
             compromissosMenuItem.Name = "compromissosMenuItem";
-            compromissosMenuItem.Size = new Size(135, 24);
+            compromissosMenuItem.Size = new Size(171, 30);
             compromissosMenuItem.Text = "Tema";
             compromissosMenuItem.Click += temaMenuItem_Click;
             // 
             // tarefasToolStripMenuItem
             // 
             tarefasToolStripMenuItem.Name = "tarefasToolStripMenuItem";
-            tarefasToolStripMenuItem.Size = new Size(135, 24);
+            tarefasToolStripMenuItem.Size = new Size(171, 30);
             tarefasToolStripMenuItem.Text = "Item";
             tarefasToolStripMenuItem.Click += itemToolStripMenuItem_Click;
             // 
             // aluguelToolStripMenuItem
             // 
             aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(135, 24);
+            aluguelToolStripMenuItem.Size = new Size(171, 30);
             aluguelToolStripMenuItem.Text = "Alugueis";
             aluguelToolStripMenuItem.Click += festasToolStripMenuItem_Click;
             // 
@@ -228,13 +228,13 @@
             // btnConfigurarDescontos
             // 
             btnConfigurarDescontos.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnConfigurarDescontos.Enabled = false;
             btnConfigurarDescontos.Image = Properties.Resources.btnConfigurarDescontos;
             btnConfigurarDescontos.ImageScaling = ToolStripItemImageScaling.None;
             btnConfigurarDescontos.ImageTransparentColor = Color.Magenta;
             btnConfigurarDescontos.Name = "btnConfigurarDescontos";
             btnConfigurarDescontos.Padding = new Padding(5);
             btnConfigurarDescontos.Size = new Size(38, 38);
+            btnConfigurarDescontos.Click += btnConfigurarDescontos_Click;
             // 
             // toolStripSeparator4
             // 
