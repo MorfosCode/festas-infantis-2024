@@ -21,7 +21,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         #region Construtor
         public ControladorAluguel(IRepositorioAluguel repositorio, IRepositorioCliente repositorioCliente, IRepositorioTema repositorioTema)
         {
-            this.repositorioAluguel = repositorio;
+            this.repositorioAluguel = repositorioAluguel;
             this.repositorioCliente = repositorioCliente;
             this.repositorioTema = repositorioTema;
         }
@@ -40,7 +40,8 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         #region Adiciona novo registro de aluguel
         public override void Adicionar()
         {
-            TelaCadastroAluguelForm telaAluguel = new TelaCadastroAluguelForm();
+            TelaCadastroAluguelForm telaAluguel = new TelaCadastroAluguelForm(
+                repositorioCliente.SelecionarTodos(), repositorioTema.SelecionarTodos());
             DialogResult resultado = telaAluguel.ShowDialog();
 
             if (resultado != DialogResult.OK)

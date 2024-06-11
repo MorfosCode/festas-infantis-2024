@@ -13,14 +13,14 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public Tema()
         {
-          
 
-        } 
+        }
+
         public Tema(string nome, double valor, List<Item> itens)
         {
             Nome = nome;
-            ValorTotal = CalcularTotal();
             Itens = itens;
+            ValorTotal = CalcularTotal();
 
         }
 
@@ -28,8 +28,8 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             Tema atualizar = (Tema)novoRegistro;
 
-            Nome = atualizar.Nome;
             ValorTotal = atualizar.ValorTotal;
+            Nome = atualizar.Nome;
             Itens = atualizar.Itens;
         }
 

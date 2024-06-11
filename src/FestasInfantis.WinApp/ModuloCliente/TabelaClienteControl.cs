@@ -30,8 +30,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public void AtualizarRegistros(List<Cliente> clientes)
         {
             grid.Rows.Clear();
-            foreach (Cliente contato in clientes)
-                grid.Rows.Add(contato.Id, contato.Nome, contato.Telefone, contato.Cpf);
+            foreach (Cliente cliente in clientes)
+                grid.Rows.Add(cliente.Id, cliente.Nome, cliente.Telefone, cliente.Cpf);
         }
         #endregion
 

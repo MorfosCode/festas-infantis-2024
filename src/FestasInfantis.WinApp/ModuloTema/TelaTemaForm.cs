@@ -20,11 +20,9 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             set
             {
-
                 txtId.Text = value.Id.ToString();
                 txtTema.Text = value.Nome;
                 txtValor.Text = value.ValorTotal.ToString();
-
             }
             get
             {
@@ -40,12 +38,10 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         private void CarregarItens(List<Item> itens)
         {
-
             foreach (Item itensList in itens)
             {
                 if (itensList.Tema == null)
                     ListBoxItem.Items.Add(itensList);
-
             }
         }
 
