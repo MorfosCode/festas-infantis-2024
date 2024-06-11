@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FestasInfantis.WinApp.ModuloAluguel.ModuloFesta;
+
 using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloTema;
 
@@ -23,18 +23,18 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             set
             {
                 txtRua.Text = value.ToString();
-                txtNumeroEndereco.Text = value.Festa.Numero.ToString();
+                txtNumeroEndereco.Text = value.Festa.NumeroEndereco.ToString();
                 txtBairro.Text = value.ToString();
                 txtCidade.Text = value.ToString();
                 comboBoxEstados.Text = value.ToString();
 
-                dateTimePickerDataFesta.Text = value.Festa.DiaFesta.ToShortDateString();
+                dateTimePickerDataFesta.Text = value.Festa.DataFesta.ToShortDateString();
                 dateTimePickerHoraInicio.Text = value.ToString();
                 dateTimePickerHoraTermino.Text = value.ToString();
                 txtId.Text = value.Id.ToString();
 
 
-                txtDesconto.Text = value.percentualDesconto.ToString();
+                txtDesconto.Text = value.PercentualDesconto.ToString();
                 txtTotal.Text = value.ToString();
                 txtDesconto.Text = value.ToString();
                 txtValorSinal.Text = value.ToString();
@@ -72,7 +72,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
                 comboBoxClientes.Items.Add(cliente.Nome);
         }
 
-        public void CarregarClientes(List<Cliente> cliente)
+        public void CarregarPreencherClientes(List<Cliente> cliente)
         {
             foreach (Cliente clienteList in cliente)
             {
@@ -85,7 +85,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             {
                 comboBoxClientes.SelectedIndex = -1;
                 comboBoxTemas.SelectedIndex = -1;
-                txtSinal.Clear();
+                txtValorSinal.Clear();
                 txtDesconto.Text = "00";
                 txtTotal.Text = "00,00";
                 txtValorSinal.Text = "00,00";
@@ -111,7 +111,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 
             comboBoxClientes.SelectedIndex = -1;
             comboBoxTemas.SelectedIndex = -1;
-            txtSinal.Clear();
+            txtValorSinal.Clear();
             txtDesconto.Text = "00";    ;
             txtTotal.Text = "00,00";
             txtValorSinal.Text = "00,00";
@@ -123,7 +123,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 
         private void textBoxSinal_Leave(object sender, EventArgs e)
         {
-            txtValorSinal.Text = txtSinal.Text;
+            txtValorSinal.Text = txtValorSinal.Text;
         }
 
         private void comboBoxTemas_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         {
             double total = Convert.ToDouble(txtTotal.Text);
             double desconto = Convert.ToDouble(txtDesconto.Text);
-            double sinal = Convert.ToDouble(txtSinal.Text);
+            double sinal = Convert.ToDouble(txtValorSinal.Text);
 
             double totalComDesconto = total - desconto;
 
@@ -149,7 +149,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             txtTotalComDesconto.Text = totalComDesconto.ToString();
             txtValorPendente.Text = pendente.ToString();
         }
-        #endregion
+       
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {

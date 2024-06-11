@@ -12,6 +12,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public partial class TelaFiltroAlugueis : Form
     {
+        public TipoFiltroAluguelEnum FiltroEscolhido { get; private set; }
         public TelaFiltroAlugueis()
         {
             InitializeComponent();
@@ -21,5 +22,15 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
 
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (rdbPendentes.Checked)
+                FiltroEscolhido = TipoFiltroAluguelEnum.Pendentes;
+
+            else if (rdbFinalizado.Checked)
+                FiltroEscolhido = TipoFiltroAluguelEnum.Concluidos;
+        }
+    
     }
 }

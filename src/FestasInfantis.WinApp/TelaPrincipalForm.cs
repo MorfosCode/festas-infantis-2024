@@ -14,9 +14,9 @@ namespace FestasInfantis.WinApp
 
         IRepositorioCliente repositorioCliente;
         IRepositorioTema repositorioTema;
-        RepositorioAluguel repositorioAluguel;
+        IRepositorioAluguel repositorioAluguel;
         IRepositorioItem repositorioItem;
-        
+
         RepositorioConfiguracaoEmArquivo repositorioConfiguracao;
 
         public static TelaPrincipalForm Instancia { get; private set; }
@@ -224,7 +224,16 @@ namespace FestasInfantis.WinApp
 
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
+        private void aluguéisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorAluguel(repositorioAluguel, repositorioCliente, repositorioTema);
+
+            lblTipoCadastro.Text = "Cadastro de " + controlador.TipoCadastro;
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             if (controlador is IControladorFiltravel controladorFiltravel)
                 controladorFiltravel.Filtrar();

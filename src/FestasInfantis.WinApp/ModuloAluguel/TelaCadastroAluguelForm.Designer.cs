@@ -329,7 +329,7 @@
             comboBoxClientes.Name = "comboBoxClientes";
             comboBoxClientes.Size = new Size(561, 33);
             comboBoxClientes.TabIndex = 0;
-            comboBoxClientes.SelectedIndexChanged += comboBoxClientes_SelectedIndexChanged;
+           
             // 
             // lblTema
             // 
@@ -543,7 +543,7 @@
             btnLimpar.TabIndex = 9;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = true;
-            btnLimpar.Click += btnLimpar_Click;
+           
             // 
             // btnSalvar
             // 

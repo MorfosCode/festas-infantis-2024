@@ -4,55 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FestasInfantis.ConsoleApp.Compartilhado;
-using FestasInfantis.WinApp.ModuloAluguel.ModuloFesta;
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloFesta;
 using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
     public class Aluguel : EntidadeBase
     {
-        public Aluguel(List<Cliente> cliente, List<Tema> tema, int percentualEntrada, int percentualDesconto, 
-             Festa festa)
-        {
-            Cliente = cliente;
-            Tema = tema;
-            this.percentualEntrada = percentualEntrada;
-            this.percentualDesconto = percentualDesconto;
         
-            Festa = festa;
-        }
-
         public List<Cliente> Cliente { get; set; }
 
         public List <Tema> Tema { get; set; }
-        public int percentualEntrada { get; set; }
-        public int percentualDesconto { get; set; }
-        public DateTime dataPagamento { get; set; }
-        public bool statusConcluido { get; set; } = false;
+        public int PercentualEntrada { get; set; }
+        public int PercentualDesconto { get; set; }
+        public DateTime DataPagamento { get; set; }
+        public bool Status{ get; set; } = false;
+        public Festa Festa { get; set; }
 
-        }
 
-        public Aluguel
-            (
-                Cliente cliente,
-                Tema tema,
-                Festa festa,
-                int percentualEntrada,
-                int percentualDesconto,
-                DateTime dataPagamento,
-                string status
-            )
+        public Aluguel(
+            List<Cliente> cliente, 
+            List<Tema> tema, 
+            int percentualEntrada, 
+            int percentualDesconto, 
+            DateTime dataPagamento, 
+            bool status, 
+            Festa festa)
         {
-            this.Cliente = cliente;
-            this.Tema = tema;
-            this.Festa = festa;
-            this.PercentualEntrada = percentualEntrada;
-            this.PercentualDesconto = percentualDesconto;
-            this.DataPagamento = dataPagamento;
-            this.Status = status;
+            Cliente = cliente;
+            Tema = tema;
+            PercentualEntrada = percentualEntrada;
+            PercentualDesconto = percentualDesconto;
+            DataPagamento = dataPagamento;
+            Status = status;
+            Festa = festa;
         }
-        #endregion
+
 
         #region Atualização de registro
         public override void AtualizarRegistro(EntidadeBase novoRegistro)
@@ -74,9 +62,9 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         {
             List<string> erros = new List<string>();
 
-            if (string.IsNullOrEmpty(Cliente.Nome.Trim()))
+        //    if (string.IsNullOrEmpty(Cliente.Nome.Trim()))
                 erros.Add("O campo \"NOME DO CLIENTE\" é obrigatório");
-            if (string.IsNullOrEmpty(Tema.Nome.Trim()))
+           // if (string.IsNullOrEmpty(Tema.Nome.Trim()))
                 erros.Add("O campo \"DESCRIÇÃO DO TEMA\" é obrigatório");
             if (string.IsNullOrEmpty(PercentualEntrada.ToString().Trim()))
                 erros.Add("O campo \"PERCENTUAL DE ENTRADA\" é obrigatório");

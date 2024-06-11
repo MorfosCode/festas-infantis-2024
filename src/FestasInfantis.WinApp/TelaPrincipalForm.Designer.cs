@@ -33,7 +33,7 @@
             clientesMenuItem = new ToolStripMenuItem();
             compromissosMenuItem = new ToolStripMenuItem();
             tarefasToolStripMenuItem = new ToolStripMenuItem();
-            aluguelToolStripMenuItem = new ToolStripMenuItem();
+            aluguéisToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             statusLabelPrincipal = new ToolStripStatusLabel();
             toolStrip1 = new ToolStrip();
@@ -69,7 +69,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, compromissosMenuItem, tarefasToolStripMenuItem, aluguelToolStripMenuItem });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, compromissosMenuItem, tarefasToolStripMenuItem, aluguéisToolStripMenuItem });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(86, 24);
             cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -77,30 +77,30 @@
             // clientesMenuItem
             // 
             clientesMenuItem.Name = "clientesMenuItem";
-            clientesMenuItem.Size = new Size(171, 30);
+            clientesMenuItem.Size = new Size(135, 24);
             clientesMenuItem.Text = "Clientes";
             clientesMenuItem.Click += clientesMenuItem_Click;
             // 
             // compromissosMenuItem
             // 
             compromissosMenuItem.Name = "compromissosMenuItem";
-            compromissosMenuItem.Size = new Size(171, 30);
+            compromissosMenuItem.Size = new Size(135, 24);
             compromissosMenuItem.Text = "Tema";
             compromissosMenuItem.Click += temaMenuItem_Click;
             // 
             // tarefasToolStripMenuItem
             // 
             tarefasToolStripMenuItem.Name = "tarefasToolStripMenuItem";
-            tarefasToolStripMenuItem.Size = new Size(171, 30);
+            tarefasToolStripMenuItem.Size = new Size(135, 24);
             tarefasToolStripMenuItem.Text = "Item";
             tarefasToolStripMenuItem.Click += itemToolStripMenuItem_Click;
             // 
-            // aluguelToolStripMenuItem
+            // aluguéisToolStripMenuItem
             // 
-            aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            aluguelToolStripMenuItem.Size = new Size(171, 30);
-            aluguelToolStripMenuItem.Text = "Alugueis";
-            aluguelToolStripMenuItem.Click += festasToolStripMenuItem_Click;
+            aluguéisToolStripMenuItem.Name = "aluguéisToolStripMenuItem";
+            aluguéisToolStripMenuItem.Size = new Size(135, 24);
+            aluguéisToolStripMenuItem.Text = "Aluguéis";
+            aluguéisToolStripMenuItem.Click += aluguéisToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -180,6 +180,7 @@
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Padding = new Padding(5);
             btnFiltrar.Size = new Size(38, 38);
+            btnFiltrar.Click += btnFiltrar_Click_1;
             // 
             // toolStripSeparator3
             // 
@@ -308,6 +309,6 @@
         private ToolStripButton btnConcluirAluguel;
         private ToolStripButton btnConfigurarDescontos;
         private ToolStripSeparator toolStripSeparator4;
-        private ToolStripMenuItem aluguelToolStripMenuItem;
+        private ToolStripMenuItem aluguéisToolStripMenuItem;
     }
 }

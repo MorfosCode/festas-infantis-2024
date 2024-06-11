@@ -49,44 +49,44 @@
             groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(405, 143);
+            groupBox1.Size = new Size(420, 143);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Configurações";
             // 
             // textBoxPercentualMaximoDeDesconto
             // 
-            textBoxPercentualMaximoDeDesconto.Location = new Point(303, 82);
+            textBoxPercentualMaximoDeDesconto.Location = new Point(315, 82);
             textBoxPercentualMaximoDeDesconto.Margin = new Padding(4);
             textBoxPercentualMaximoDeDesconto.Name = "textBoxPercentualMaximoDeDesconto";
-            textBoxPercentualMaximoDeDesconto.Size = new Size(90, 31);
+            textBoxPercentualMaximoDeDesconto.Size = new Size(90, 27);
             textBoxPercentualMaximoDeDesconto.TabIndex = 1;
             // 
             // textBoxPercentualDeDesconto
             // 
-            textBoxPercentualDeDesconto.Location = new Point(303, 32);
+            textBoxPercentualDeDesconto.Location = new Point(315, 32);
             textBoxPercentualDeDesconto.Margin = new Padding(4);
             textBoxPercentualDeDesconto.Name = "textBoxPercentualDeDesconto";
-            textBoxPercentualDeDesconto.Size = new Size(90, 31);
+            textBoxPercentualDeDesconto.Size = new Size(90, 27);
             textBoxPercentualDeDesconto.TabIndex = 0;
             // 
             // labelPercentualMaximoDeDesconto
             // 
             labelPercentualMaximoDeDesconto.AutoSize = true;
-            labelPercentualMaximoDeDesconto.Location = new Point(30, 85);
+            labelPercentualMaximoDeDesconto.Location = new Point(25, 85);
             labelPercentualMaximoDeDesconto.Margin = new Padding(4, 0, 4, 0);
             labelPercentualMaximoDeDesconto.Name = "labelPercentualMaximoDeDesconto";
-            labelPercentualMaximoDeDesconto.Size = new Size(271, 25);
+            labelPercentualMaximoDeDesconto.Size = new Size(226, 20);
             labelPercentualMaximoDeDesconto.TabIndex = 0;
             labelPercentualMaximoDeDesconto.Text = "Percentual Máximo de Desconto:";
             // 
             // labelPercentualDeDesconto
             // 
             labelPercentualDeDesconto.AutoSize = true;
-            labelPercentualDeDesconto.Location = new Point(3, 35);
+            labelPercentualDeDesconto.Location = new Point(8, 35);
             labelPercentualDeDesconto.Margin = new Padding(4, 0, 4, 0);
             labelPercentualDeDesconto.Name = "labelPercentualDeDesconto";
-            labelPercentualDeDesconto.Size = new Size(298, 25);
+            labelPercentualDeDesconto.Size = new Size(248, 20);
             labelPercentualDeDesconto.TabIndex = 0;
             labelPercentualDeDesconto.Text = "Percentual de Desconto Por Aluguel:";
             // 
@@ -127,21 +127,22 @@
             // 
             // TelaConfiguracao
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(435, 214);
+            ClientSize = new Size(459, 242);
             Controls.Add(buttonSalvar);
             Controls.Add(buttonLimpar);
             Controls.Add(buttonCancelar);
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "TelaConfiguracao";
             ShowIcon = false;
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "e-Agenda - Configurações";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Configuração de Desconto";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

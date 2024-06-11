@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
-using FestasInfantis.WinApp.ModuloItem;
 using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
@@ -20,7 +19,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         private TabelaAluguelControl tabelaAluguel;
 
         #region Construtor
-        public ControladorAluguel(IRepositorioAluguel repositorio, IRepositorioCliente repositorioCliente, IRepositorioTema repositorioTema)
+        public ControladorAluguel(IRepositorioAluguel repositorioAluguel, IRepositorioCliente repositorioCliente, IRepositorioTema repositorioTema)
         {
             this.repositorioAluguel = repositorioAluguel;
             this.repositorioCliente = repositorioCliente;
@@ -99,9 +98,6 @@ namespace FestasInfantis.WinApp.ModuloAluguel
                 .Instancia
                 .AtualizarRodape($"Visualizando \"{aluguelSelecionado.Count}\" registros...");
         }
-
-
-    
 
         #region Obtem registro e retorna tabela de alugueis
         public override UserControl ObterListagem()
