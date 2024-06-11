@@ -167,7 +167,7 @@
             Name = "TelaCadastroCliente";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TelaCadastroCliente";
+            Text = "Cadastro Cliente";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -50,7 +50,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 new DataGridViewTextBoxColumn{ DataPropertyName = "id", HeaderText = "ID" },
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Cliente", HeaderText = "Cliente" },
                 new DataGridViewTextBoxColumn{ DataPropertyName = "Telefone", HeaderText = "Telefone" },
-                new DataGridViewTextBoxColumn{ DataPropertyName = "Cpf", HeaderText = "CPF" }
+                new DataGridViewTextBoxColumn{ DataPropertyName = "Cpf", HeaderText = "CPF" },
+                new DataGridViewTextBoxColumn{ DataPropertyName = "quantidade", HeaderText = "Quantidade de Aluguéis" }
             };
         }
         #endregion

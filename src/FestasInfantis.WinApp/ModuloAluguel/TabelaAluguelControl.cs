@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FestasInfantis.WinApp.Compartilhado;
-using FestasInfantis.WinApp.ModuloCliente;
+
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {

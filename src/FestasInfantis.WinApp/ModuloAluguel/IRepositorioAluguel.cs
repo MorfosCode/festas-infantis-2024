@@ -15,7 +15,8 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 
         bool Editar(int id, Aluguel aluguelEditado);
         bool Excluir(int id);
-
+        List<Aluguel> SelecionarAluguelConcluido();
+        List<Aluguel> SelecionarAluguelPendente();
         Aluguel SelecionarPorId(int idSelecionado);
 
         List<Aluguel> SelecionarTodos();

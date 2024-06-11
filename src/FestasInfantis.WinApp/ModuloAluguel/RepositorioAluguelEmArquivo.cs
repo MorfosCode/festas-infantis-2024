@@ -12,5 +12,12 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         public RepositorioAluguelEmArquivo() : base("aluguel.json")
         {
         }
+        public List<Aluguel> SelecionarCompromissosPendentes()
+            => registros
+                .FindAll(aluguel => !aluguel.statusConcluido);
+
+        public List<Aluguel> SelecionarCompromissosConcluidos()
+            => registros
+                .FindAll(aluguel => aluguel.statusConcluido);
     }
 }

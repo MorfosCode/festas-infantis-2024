@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         public int percentualEntrada { get; set; }
         public int percentualDesconto { get; set; }
         public DateTime dataPagamento { get; set; }
-        public bool status {  get; set; }
+        public bool statusConcluido { get; set; } = false;
 
         public Festa Festa { get; set; }
 
